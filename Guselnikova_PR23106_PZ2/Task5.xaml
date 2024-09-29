@@ -1,0 +1,46 @@
+﻿<Window x:Class="Guselnikova_PR23106_PZ2.Task5"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Guselnikova_PR23106_PZ2"
+        mc:Ignorable="d"
+        Title="Task5" Height="450" Width="800">
+    <Grid>
+        <ScrollViewer>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Background="LightSalmon">
+                    <Image Width="45" Height="45" HorizontalAlignment="Left" Margin="5"/>
+                    <Button x:Name="btnBack" HorizontalAlignment="Right" Content="Назад" Click="btnBack_Click" Background="LightGreen"/>
+                </Grid>
+
+                <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Text="Введите размерность массива (M и N)" HorizontalAlignment="Center" FontSize="24" Margin="10"/>
+
+                    <TextBox x:Name="txtRows" Width="50" Height="30" HorizontalAlignment="Center" FontSize="20" Margin="5"/>
+                    <TextBox x:Name="txtColumns" Width="50" Height="30" HorizontalAlignment="Center" FontSize="20" Margin="5"/>
+
+                    <Button Content="Сгенерировать массив" Width="200" Height="50" HorizontalAlignment="Center" FontSize="18" Click="BtnGenerate_Click"/>
+
+                    <TextBlock x:Name="txtResult" HorizontalAlignment="Center" FontSize="20" Margin="10"/>
+
+                    <TextBlock Text="Исходный массив:" FontWeight="Bold" HorizontalAlignment="Center" FontSize="20" Margin="10"/>
+                    <TextBlock x:Name="txtOriginalArray" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="18" Margin="10"/>
+
+                    <TextBlock Text="Отсортированный массив по возрастанию:" FontWeight="Bold" HorizontalAlignment="Center" FontSize="20" Margin="10"/>
+                    <TextBlock x:Name="txtSortedAscending" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="18" Margin="10"/>
+
+                    <TextBlock Text="Отсортированный массив по убыванию:" FontWeight="Bold" HorizontalAlignment="Center" FontSize="20" Margin="10"/>
+                    <TextBlock x:Name="txtSortedDescending" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="18" Margin="10"/>
+
+                    <TextBlock x:Name="txtMinMax" HorizontalAlignment="Center" FontSize="20" Margin="10"/>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Window>
